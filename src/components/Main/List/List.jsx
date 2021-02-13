@@ -7,9 +7,7 @@ import { ExpenseTrackerContext } from '../../../context/context';
 
 const List = () => {
     const classes = useStyles();
-    const globalState = useContext(ExpenseTrackerContext);
-
-    console.log(globalState);
+    const { deleteTransaction } = useContext(ExpenseTrackerContext);
 
     const transactions = [
         {id: 1, type: "Income", category: 'Salary', amount: 50, date: "Fri Feb 12 2021"},
